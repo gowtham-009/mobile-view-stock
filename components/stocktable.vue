@@ -126,9 +126,9 @@
   <!-- Table Skeleton -->
   <div class="border border-gray-300 rounded-lg">
     <div class="grid grid-cols-3 p-3 bg-gray-100">
-      <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
-      <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
-      <div class="h-6 bg-gray-200 rounded w-16 animate-pulse"></div>
+      <div class="h-8 bg-gray-200 rounded w-24 animate-pulse"></div>
+      <div class="h-8 bg-gray-200 rounded w-24 animate-pulse"></div>
+      <div class="h-8 bg-gray-200 rounded w-16 animate-pulse"></div>
     </div>
     
     <div class="space-y-2">
@@ -279,7 +279,7 @@
 
   <div class="overflow-hidden rounded-lg bg-white  mt-1">
     <div class="px-1 py-2 ">
-      <DataTable  ref="dt" v-model:filters="filters"  paginator :rows="5" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
+      <DataTable  ref="dt" v-model:filters="filters"  paginator :rows="10" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
 
 
 
