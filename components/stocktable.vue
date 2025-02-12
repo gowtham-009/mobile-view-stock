@@ -668,7 +668,7 @@ const filterLastWeek = async () => {
   });
 
   activeFilter.value = 'week'; // Update active filter
-  customfilterbox.value = false;
+ 
 
   // Log first and last date if data exists
   if (filteredCustomers.value.length > 0) {
@@ -690,6 +690,8 @@ const filterLastWeek = async () => {
   } else {
     console.log("No customers found in the last week.");
   }
+
+  visibleTop.value=false
 };
 
 
@@ -709,10 +711,6 @@ todaygain.value=data[1].day_15.todaygain
 } catch (error) {
 console.error("Error:", error.message);
 }
-
-
-
-
 
   const today = new Date();
   const fifteenDaysAgo = new Date();
@@ -744,7 +742,7 @@ console.error("Error:", error.message);
   }
   activeFilter.value = '15days'; // Update active filter state
   console.log('Filtered last 15 days', filteredCustomers.value);
-  customfilterbox.value=false
+  visibleTop.value=false
 };
 
 // Function to filter last month
@@ -794,7 +792,7 @@ console.error("Error:", error.message);
   }
   activeFilter.value = 'month'; // Update active filter state
   console.log('Filtered last month', filteredCustomers.value);
-  customfilterbox.value=false
+  visibleTop.value=false
 };
 
 // Function to filter last 3 months
@@ -845,24 +843,36 @@ console.error("Error:", error.message);
 
   activeFilter.value = '3months'; // Update active filter state
   console.log('Filtered last 3 months', filteredCustomers.value);
-  customfilterbox.value=false
+  visibleTop.value=false
 };
 
-// Function to filter by selected date range
 const applyFilter = () => {
   if (!start.value || !end.value) {
     filteredCustomers.value = customers.value;
     return;
   }
+
+  // Convert date values to dd-mm-yyyy format
+  const startDate = new Date(start.value);
+  const endDate = new Date(end.value);
+  
+  const formatDate = (date) => {
+    return `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}`;
+  };
+
+  start.value=formatDate(startDate)
+  end.value=formatDate(endDate)
+
+
   filteredCustomers.value = customers.value.filter(customer => {
     const customerDate = new Date(customer.date);
-    return customerDate >= new Date(start.value) && customerDate <= new Date(end.value).setHours(23, 59, 59, 999);
+    return customerDate >= startDate && customerDate <= endDate.setHours(23, 59, 59, 999);
   });
 
   activeFilter.value = ''; // Reset filter state when custom date is selected
-
-  customfilterbox.value=false
+  visibleTop.value = false;
 };
+
 
 onMounted(() => {
   getdata();
