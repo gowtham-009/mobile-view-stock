@@ -297,13 +297,9 @@
 
   <div class="overflow-hidden rounded-lg bg-white  mt-1">
     <div class="px-1 py-2 ">
-      <DataTable  ref="dt" v-model:filters="filters" paginator :rows="rows" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
+      <DataTable  ref="dt" v-model:filters="filters"  paginator :rows="10" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
 
-<template #paginatorstart>
-<div class="pageination" style="display: flex; gap: 10px;">
-  <button type="button" v-for="size in [10, 50, 100]" :key="size" :label="size" @click="rows = size"  class="rounded-md px-3 py-2 text-sm font-semibold text-white shadow-sm " :class="{'bg-indigo-500': rows === size, 'bg-indigo-200': rows !== size}" >  {{ size }}</button>
-</div>
-</template>
+
 
 <template #header>
       <div class="flex justify-end">
@@ -595,7 +591,7 @@ const todaygain=ref('')
 const customfilterbox = ref(false);
 const customBox = ref(null);
 
-const rows = ref(10);
+
 const filters = ref();
 
 const customers = ref([]);
