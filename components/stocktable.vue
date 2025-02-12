@@ -1,5 +1,8 @@
 <template>
   <Toast />
+
+
+
   <div class="overflow-hidden rounded-lg bg-white ">
     <div class="px-1 py-2 ">
       <div class="card flex justify-between items-center gap-2  text-lg">
@@ -80,139 +83,118 @@
     </div>
   </div>
 
-  <div class="w-full mt-5" v-if="loading">
+  <div class="w-full mt-2" v-if="loading" >
 
-
-    <ul role="list" class="grid grid-cols-2 sm:grid-cols-2 gap-4 lg:grid-cols-2">
-  <!-- Invested Amount Skeleton -->
-  <li class="col-span-1 rounded-lg bg-white shadow-md animate-pulse">
-    <div class="flex items-center space-x-4 p-4">
-      <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-      <div class="w-full">
-        <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
-        <div class="h-5 bg-gray-300 rounded w-32"></div>
-      </div>
+    <div class="p-1 space-y-4">
+  <!-- Stats Section -->
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div class="w-full h-20 bg-white rounded-lg shadow p-4 flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gray-300 rounded-full animate-pulse"></div>
+        <div>
+            <div class="w-24 h-4 bg-gray-300 rounded animate-pulse mb-2"></div>
+            <div class="w-16 h-5 bg-gray-300 rounded animate-pulse"></div>
+        </div>
     </div>
-  </li>
-
-  <!-- Current Value Skeleton -->
-  <li class="col-span-1 rounded-lg bg-white shadow-md animate-pulse">
-    <div class="flex items-center space-x-4 p-4">
-      <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-      <div class="w-full">
-        <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
-        <div class="h-5 bg-gray-300 rounded w-32"></div>
-      </div>
+    <div class="w-full h-20 bg-white rounded-lg shadow p-4 flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gray-300 rounded-full animate-pulse"></div>
+        <div>
+            <div class="w-24 h-4 bg-gray-300 rounded animate-pulse mb-2"></div>
+            <div class="w-16 h-5 bg-gray-300 rounded animate-pulse"></div>
+        </div>
     </div>
-  </li>
-
-  <!-- Overall Gain Skeleton -->
-  <li class="col-span-1 rounded-lg bg-white shadow-md animate-pulse">
-    <div class="flex items-center space-x-4 p-4">
-      <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-      <div class="w-full">
-        <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
-        <div class="h-5 bg-gray-300 rounded w-32"></div>
-      </div>
+    <div class="w-full h-20 bg-white rounded-lg shadow p-4 flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gray-300 rounded-full animate-pulse"></div>
+        <div>
+            <div class="w-24 h-4 bg-gray-300 rounded animate-pulse mb-2"></div>
+            <div class="w-16 h-5 bg-gray-300 rounded animate-pulse"></div>
+        </div>
     </div>
-  </li>
-
-  <!-- Today's Gain Skeleton -->
-  <li class="col-span-1 rounded-lg bg-white shadow-md animate-pulse">
-    <div class="flex items-center space-x-4 p-4">
-      <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-      <div class="w-full">
-        <div class="h-4 bg-gray-200 rounded w-24 mb-2"></div>
-        <div class="h-5 bg-gray-300 rounded w-32"></div>
-      </div>
+    <div class="w-full h-20 bg-white rounded-lg shadow p-4 flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gray-300 rounded-full animate-pulse"></div>
+        <div>
+            <div class="w-24 h-4 bg-gray-300 rounded animate-pulse mb-2"></div>
+            <div class="w-16 h-5 bg-gray-300 rounded animate-pulse"></div>
+        </div>
     </div>
-  </li>
-</ul>
-
-  <div class="w-full p-2 mt-3  animate-pulse" >
-    <div class="h-6 bg-gray-300 rounded col-span-1 w-full"></div>
   </div>
-  
-  <div class="space-y-4 p-4 mt-3" >
-       <!-- Table Skeleton -->
-       <div class="grid grid-cols-9 gap-4 animate-pulse">
-         <!-- Rows -->
-         <!-- Row 1 -->
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-          
-         </div>
-     
-         <!-- Row 2 -->
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           
-         </div>
-     
-         <!-- Row 3 -->
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-  
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-  
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-  
-         <div class="col-span-9 grid grid-cols-3 gap-4">
-           
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-           <div class="h-6 bg-gray-300 rounded col-span-1"></div>
-         </div>
-       </div>
-     </div>
+
+  <!-- Search Bar -->
+  <div class="h-10 bg-white p-2 border border-gray-300 rounded-lg animate-pulse">
+    <div class="h-6 bg-gray-200 rounded w-full animate-pulse"></div>
+  </div>
+
+  <!-- Table Skeleton -->
+  <div class="border border-gray-300 rounded-lg">
+    <div class="grid grid-cols-3 p-3 bg-gray-100">
+      <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+      <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+      <div class="h-6 bg-gray-200 rounded w-16 animate-pulse"></div>
+    </div>
+    
+    <div class="space-y-2">
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+      <div class="grid grid-cols-3 p-3 border-t border-gray-300">
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-24 animate-pulse"></div>
+        <div class="h-6 bg-gray-200 rounded w-10 animate-pulse"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Pagination Skeleton -->
+  <div class="flex justify-center space-x-2 mt-4">
+    <div class="h-8 w-8 bg-gray-200 rounded-full animate-pulse"></div>
+    <div class="h-8 w-8 bg-gray-200 rounded-full animate-pulse"></div>
+    <div class="h-8 w-8 bg-gray-200 rounded-full animate-pulse"></div>
+  </div>
+</div>
+
+
   </div>
   
 
@@ -297,7 +279,7 @@
 
   <div class="overflow-hidden rounded-lg bg-white  mt-1">
     <div class="px-1 py-2 ">
-      <DataTable  ref="dt" v-model:filters="filters"  paginator :rows="10" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
+      <DataTable  ref="dt" v-model:filters="filters"  paginator :rows="5" showGridlines removableSort    filterDisplay="menu" :globalFilterFields="['stockname', 'quantity']" stripedRows :value="filteredCustomers"  >
 
 
 
