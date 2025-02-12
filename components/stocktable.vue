@@ -60,12 +60,12 @@
        <div class="flex justify-center items-center gap-2">
         <div>
               <span>Start Date</span>
-              <DatePicker  v-model="start" dateFormat="yy-mm-dd" showIcon />
+              <DatePicker  v-model="start" dateFormat="dd-mm-yy" showIcon />
           </div>
           <span>To</span>
           <div>
               <span>End Date</span>
-              <DatePicker v-model="end" dateFormat="yy-mm-dd" showIcon />
+              <DatePicker v-model="end" dateFormat="dd-mm-yy" showIcon />
           </div>
        </div>
       <div class="w-full flex justify-start mt-2">
@@ -558,7 +558,7 @@ import { ref, onMounted } from 'vue';
 import DatePicker from 'primevue/datepicker';
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 import { useToast } from "primevue/usetoast";
-import { onClickOutside } from '@vueuse/core';
+
 
 const loading=ref(true)
 const content=ref(false)
