@@ -6,7 +6,7 @@
        
        <div class="w-full">
         <div class="w-full text-black-400 text-sm" > Statement For</div>
-        <div class="w-full text-indigo-500 text-sm" style=" margin-top: -3px;"> {{ start }} To {{ end }}</div>
+        <div class="w-full text-indigo-500 text-sm" style=" margin-top: -3px;"> {{ startdate }} To {{ enddate }}</div>
        </div>
         <div class="w-full h-9  flex gap-2 justify-end" >
 
@@ -676,11 +676,14 @@ const filterLastWeek = async () => {
       return `${day}-${month}-${year}`;
     };
 
-    startdate.value = filteredCustomers.value[0].date;
-    enddate.value = filteredCustomers.value[filteredCustomers.value.length - 1].date;
+    const stdate= filteredCustomers.value[0].date;
+   const endate = filteredCustomers.value[filteredCustomers.value.length - 1].date;
 
-    start.value = formatDate(filteredCustomers.value[0].date);
-    end.value = formatDate(filteredCustomers.value[filteredCustomers.value.length - 1].date);
+    startdate.value = formatDate(stdate);
+    enddate.value = formatDate(endate);
+
+    start.value=startdate.value
+    end.value=enddate.value
 
     console.log(start.value);
   } else {
@@ -726,13 +729,15 @@ console.error("Error:", error.message);
       return `${day}-${month}-${year}`;
     };
 
-    startdate.value = filteredCustomers.value[0].date;
-    enddate.value = filteredCustomers.value[filteredCustomers.value.length - 1].date;
+   const stdate= filteredCustomers.value[0].date;
+   const endate = filteredCustomers.value[filteredCustomers.value.length - 1].date;
 
-    start.value = formatDate(filteredCustomers.value[0].date);
-    end.value = formatDate(filteredCustomers.value[filteredCustomers.value.length - 1].date);
+    startdate.value = formatDate(stdate);
+    enddate.value = formatDate(endate);
 
-    console.log(start.value);
+    start.value=startdate.value
+    end.value=enddate.value
+ 
   } else {
     console.log("No customers found in the last week.");
   }
@@ -776,13 +781,16 @@ console.error("Error:", error.message);
       return `${day}-${month}-${year}`;
     };
 
-    startdate.value = filteredCustomers.value[0].date;
-    enddate.value = filteredCustomers.value[filteredCustomers.value.length - 1].date;
+    const stdate= filteredCustomers.value[0].date;
+   const endate = filteredCustomers.value[filteredCustomers.value.length - 1].date;
 
-    start.value = formatDate(filteredCustomers.value[0].date);
-    end.value = formatDate(filteredCustomers.value[filteredCustomers.value.length - 1].date);
+    startdate.value = formatDate(stdate);
+    enddate.value = formatDate(endate);
 
-    console.log(start.value);
+    start.value=startdate.value
+    end.value=enddate.value
+
+   
   } else {
     console.log("No customers found in the last week.");
   }
@@ -826,13 +834,15 @@ console.error("Error:", error.message);
       return `${day}-${month}-${year}`;
     };
 
-    startdate.value = filteredCustomers.value[0].date;
-    enddate.value = filteredCustomers.value[filteredCustomers.value.length - 1].date;
+    const stdate= filteredCustomers.value[0].date;
+   const endate = filteredCustomers.value[filteredCustomers.value.length - 1].date;
 
-    start.value = formatDate(filteredCustomers.value[0].date);
-    end.value = formatDate(filteredCustomers.value[filteredCustomers.value.length - 1].date);
+    startdate.value = formatDate(stdate);
+    enddate.value = formatDate(endate);
 
-    console.log(start.value);
+    start.value=startdate.value
+    end.value=enddate.value
+
   } else {
     console.log("No customers found in the last week.");
   }
@@ -856,8 +866,8 @@ const applyFilter = () => {
     return `${String(date.getDate()).padStart(2, '0')}-${String(date.getMonth() + 1).padStart(2, '0')}-${date.getFullYear()}`;
   };
 
-  start.value=formatDate(startDate)
-  end.value=formatDate(endDate)
+  startdate.value=formatDate(startDate)
+  enddate.value=formatDate(endDate)
 
 
   filteredCustomers.value = customers.value.filter(customer => {
