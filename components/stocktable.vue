@@ -301,17 +301,17 @@
 
 
 
-<Column  v-if="visibleColumns.includes('stockname')" sortable field="stockname" header="StockName" class="text-sm">
+<Column   v-if="visibleColumns.includes('stockname')" sortable field="stockname" header="StockName" class="text-sm cursor-pointer">
   <template #body="{ data }">
-          {{ data.stockname }}
+          <span  @click="topcanva(data)">{{ data.stockname }}</span>
       </template>
       <template #filter="{ filterModel }">
           <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
       </template>
 </Column>
-<Column v-if="visibleColumns.includes('quantity')"  sortable field="quantity" header="Quantity" class="text-sm" :showFilterOperator="false" :showFilterMatchModes="false" >
+<Column v-if="visibleColumns.includes('quantity')"  sortable field="quantity" header="Quantity" class="text-sm cursor-pointer" :showFilterOperator="false" :showFilterMatchModes="false" >
   <template #body="{ data }">
-          {{ data.quantity }}
+          <span  @click="topcanva(data)">{{ data.quantity }}</span>
       </template>
 <template #filter="{ filterModel }">
   <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="1000"></Slider>
@@ -329,7 +329,7 @@
 
 
 
-<Column   v-if="visibleColumns.includes('action')"  field="action" header="Action" :showFilterOperator="false" :showFilterMatchModes="false" >
+<Column class="cursor-pointer"   v-if="visibleColumns.includes('action')"  field="action" header="Action" :showFilterOperator="false" :showFilterMatchModes="false" >
   <template #body="{ data }">
  <button type="button"  @click="topcanva(data)" class="rounded-md   px-2 py-1.5 text-sm bg-indigo-600 font-semibold text-white shadow-sm " ><i class="pi pi-eye"></i></button>
 
