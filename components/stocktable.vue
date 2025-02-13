@@ -32,8 +32,9 @@
     </template>
            
               <template #footer v-if="showReset">
+                <button type="button"   @click="resetColumns" class="rounded-md w-full bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset</button>
 
-              <Button label="Reset" style="width: 100%;" @click="resetColumns"/>
+            
               </template>
               </MultiSelect> 
               <button type="button"  @click="customtoggle()" class="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-filter-fill"></i></button>
@@ -1018,4 +1019,8 @@ console.error("Error:", error.message);
 }
 
 
+.p-checkbox-checked.p-variant-filled .p-checkbox-box{
+  background-color: blue !important;
+  border: blue !important;
+}
 </style>
