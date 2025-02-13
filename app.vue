@@ -1,12 +1,5 @@
 <template>
-  <!--
-    This example requires updating your template:
-
-    ```
-    <html class="h-full bg-white">
-    <body class="h-full">
-    ```
-  -->
+ 
   <div>
     <TransitionRoot as="template" :show="sidebarOpen">
       <Dialog class="relative z-50 lg:hidden" @close="sidebarOpen = false">
@@ -58,7 +51,7 @@
         <span class="sr-only">Open sidebar</span>
         <i class="pi pi-bars"></i>
       </button>
-      <div class="flex-1 text-sm/6 font-semibold text-white">Dashboard</div>
+      <div class="flex-1 text-lg font-semibold text-white">W3</div>
       
     </div>
 
