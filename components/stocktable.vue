@@ -93,7 +93,7 @@
     <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
       <div class="flex w-full items-center justify-between space-x-6 p-2">
         <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-indigo-50 rounded-full w-12 h-12"></div>
+          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
           <div class="w-full p-1">
             <div class="h-3 bg-gray-300 rounded w-24"></div>
             <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
@@ -105,7 +105,7 @@
     <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
       <div class="flex w-full items-center justify-between space-x-6 p-2">
         <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-indigo-50 rounded-full w-12 h-12"></div>
+          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
           <div class="w-full p-1">
             <div class="h-3 bg-gray-300 rounded w-24"></div>
             <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
@@ -117,7 +117,7 @@
     <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
       <div class="flex w-full items-center justify-between space-x-6 p-2">
         <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-green-50 rounded-full w-12 h-12"></div>
+          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
           <div class="w-full p-1">
             <div class="h-3 bg-gray-300 rounded w-24"></div>
             <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
@@ -129,7 +129,7 @@
     <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
       <div class="flex w-full items-center justify-between space-x-6 p-2">
         <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-green-50 rounded-full w-12 h-12"></div>
+          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
           <div class="w-full p-1">
             <div class="h-3 bg-gray-300 rounded w-24"></div>
             <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
