@@ -142,7 +142,7 @@
 
 
 <!-- Table Skeleton -->
-<div class="border border-gray-300 rounded-lg">
+<div class="border border-gray-300 ">
 
 <div class="h-10 p-2   animate-pulse">
 <div class="h-6 bg-gray-200 rounded w-full animate-pulse"></div>
