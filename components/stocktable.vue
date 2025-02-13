@@ -609,16 +609,7 @@ const startdate=ref('')
 const enddate=ref('')
 
 
-const listItem = ref(null)
-  const listItemHeight = ref(0)
-  
-  onMounted(() => {
-    if (listItem.value) {
-      listItemHeight.value = listItem.value.clientHeight
-    
-    }
-  })
-  console.log(listItemHeight.value, "hello")
+
 const selectedTab = ref('activity');
 const changeTab = (tab) => {
   selectedTab.value = tab;
