@@ -496,7 +496,7 @@ import { ref, onMounted } from 'vue';
 import DatePicker from 'primevue/datepicker';
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 import { useToast } from "primevue/usetoast";
-
+import 'primeicons/primeicons.css'
 
 const loading=ref(true)
 const content=ref(false)
