@@ -4,14 +4,21 @@
 
 
   <div class="overflow-hidden rounded-lg bg-white ">
-    <div class="px-1 py-2 ">
-      <div class="card flex justify-between items-center gap-2  text-lg">
+    <div class="px-1 py-1 ">
+      <div class=" flex justify-between  gap-2  text-lg" >
        
-       <div class="w-full">
-        <div class="w-full text-black-400 text-md" > Statement For</div>
+       <div class="w-full flex gap-2" >
+        <div>
+          <div class="w-full text-black-400 text-md" > Statement For</div>
         <div class="w-full text-indigo-500 " style=" margin-top: -8px; font-size:10px;"> {{ startdate }} To {{ enddate }}</div>
+        </div>
+
+        <div class="w-4 h4">
+          <button type="button"  @click="customtoggle()" class="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-calendar-clock"></i></button>
+
+        </div>
        </div>
-        <div class="w-full h-9  flex gap-2 justify-end" >
+        <div class="w-full h-9  flex gap-2 justify-end "  >
 
           <MultiSelect
               v-model="selectedColumns"
@@ -28,8 +35,8 @@
              
               >
               <template #dropdownicon>
-        <i class="pi pi-objects-column " />
-    </template>
+                <i class="pi pi-table" />
+            </template>
            
               <template #footer v-if="showReset">
                 <button type="button"   @click="resetColumns" class="rounded-md w-full bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset</button>
@@ -37,9 +44,8 @@
             
               </template>
               </MultiSelect> 
-              <button type="button"  @click="customtoggle()" class="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-filter-fill"></i></button>
 
-              <button type="button"   @click="exportCSV($event)" class="rounded-md bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-arrow-down"></i></button>
+              <button type="button"   @click="exportCSV($event)" class="rounded-md bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-arrow-circle-down"></i></button>
 
         </div>
          <div >
@@ -85,61 +91,31 @@
     </div>
   </div>
 
-  
   <div class="w-full" v-if="loading" >
 
 <div class="p-1 space-y-4">
-  <ul role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-2 xs:grid-cols-1">
-    
-    <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
-      <div class="flex w-full items-center justify-between space-x-6 p-2">
-        <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-          <div class="w-full p-1">
-            <div class="h-3 bg-gray-300 rounded w-24"></div>
-            <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
-      <div class="flex w-full items-center justify-between space-x-6 p-2">
-        <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-          <div class="w-full p-1">
-            <div class="h-3 bg-gray-300 rounded w-24"></div>
-            <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
-      <div class="flex w-full items-center justify-between space-x-6 p-2">
-        <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-          <div class="w-full p-1">
-            <div class="h-3 bg-gray-300 rounded w-24"></div>
-            <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-
-    <li class="col-span-1 rounded-lg bg-white shadow animate-pulse">
-      <div class="flex w-full items-center justify-between space-x-6 p-2">
-        <div class="flex truncate">
-          <div class="flex justify-center items-center p-3 bg-gray-300 rounded-full w-12 h-12"></div>
-          <div class="w-full p-1">
-            <div class="h-3 bg-gray-300 rounded w-24"></div>
-            <div class="h-4 bg-gray-300 rounded w-16 mt-1"></div>
-          </div>
-        </div>
-      </div>
-    </li>
-
-  </ul>
+ <dl class="mx-auto grid grid-cols-2 gap-px bg-gray-900/5 ">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+    <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+    <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+    <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+    <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+    <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+    <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+    <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+    <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+    <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+    <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+    <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+    <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+  </div>
+</dl>
 
 
 <!-- Table Skeleton -->
@@ -220,83 +196,34 @@
 
 
 </div>
+ 
 
 <div class="w-full" v-if="content">
 <div class="overflow-hidden rounded-lg bg-white ">
     <div class="px-1 py-1">
-      <ul role="list" class="grid grid-cols-2 gap-2 sm:grid-cols-2 lg:grid-cols-2 xs:grid-cols-1">
-
-<li ref="listItem" class="col-span-1  rounded-lg bg-white shadow">
-<div class="flex w-full items-center justify-between space-x-6 p-2">
-<div class="flex truncate">
-  <div class="flex justify-center items-center p-3 bg-indigo-50 rounded-full"  >
-         <img src="https://cdn-icons-png.flaticon.com/128/16416/16416833.png" alt="" width="30" height="30">
-     </div>
-     <div class="w-full p-1" >
-         <span class="text-slate-400 text-xs">Invested Amount</span>
-        <p class="text-slate-700 text-xs"> <span><i class="pi pi-indian-rupee" style="font-size: 12px;"></i></span> <span >{{ investamount }}</span></p>
-     </div>
-</div>
-</div>
-<div>
-
-</div>
-</li>
-
-<li class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
-<div class="flex w-full items-center justify-between space-x-6 p-2">
-<div class="flex truncate">
-<div class="flex justify-center items-center p-3 bg-indigo-50 rounded-full"  >
-         <img src="https://cdn-icons-png.flaticon.com/128/16416/16416833.png" alt="" width="30" height="30">
-     </div>
-     <div class="w-full p-1" >
-         <span class="text-slate-400 text-xs">Current Value</span>
-        <p class="text-slate-700 text-xs"><span><i class="pi pi-indian-rupee " style="font-size: 12px;"></i></span> <span >{{ currentvalue }}</span></p>
-     </div>
-</div>
-</div>
-<div>
-
-</div>
-</li>
-
-
-<li class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
-<div class="flex w-full items-center justify-between space-x-6 p-2">
-<div class="flex truncate">
-<div class="flex justify-center items-center p-3 bg-green-50 rounded-full"  >
-         <img src="https://cdn-icons-png.flaticon.com/128/5501/5501360.png" alt="" width="30" height="30">
-     </div>                
-     <div class="w-full p-1" >
-         <span class="text-slate-400 text-xs">Overall Gain</span>
-         <p  class="text-slate-700 text-xs"> <span><i class="pi pi-indian-rupee text-xs" style="font-size: 12px;"></i></span> <span >{{ overallgain }}</span></p>
-     </div>
-</div>
-</div>
-<div>
-
-</div>
-</li>
-
-<li class="col-span-1 divide-y divide-gray-200 rounded-lg bg-white shadow">
-<div class="flex w-full items-center justify-between space-x-6 p-2">
-<div class="flex truncate">
-<div class="flex justify-center items-center p-3 bg-green-50 rounded-full"  >
-         <img src="https://cdn-icons-png.flaticon.com/128/5501/5501360.png" alt="" width="30" height="30">
-     </div>              
-      <div class="w-full p-1" >
-         <span class="text-slate-400 text-xs">Today's Gain</span>
-         <p  class="text-slate-700 text-xs"> <span><i class="pi pi-indian-rupee text-xs" style="font-size: 12px;"></i></span> <span >{{ todaygain }}</span></p>
-      </div>
-
-</div>
-</div>
-<div>
-
-</div>
-</li>
-
-</ul>
+      
+ <dl class="mx-auto grid grid-cols-2 gap-px bg-gray-900/5">
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+    <dt class="text-sm/6 font-medium text-gray-500">Invested Amount</dt>
+    <dd class="text-xs font-medium text-gray-700">+4.75%</dd>
+    <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹{{ investamount }}</dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+    <dt class="text-sm/6 font-medium text-gray-500">Current Value</dt>
+    <dd class="text-xs font-medium text-rose-600">+54.02%</dd>
+    <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹{{ currentvalue }}</dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+    <dt class="text-sm/6 font-medium text-gray-500">Overall Gain</dt>
+    <dd class="text-xs font-medium text-gray-700">-1.39%</dd>
+    <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹{{ overallgain }}</dd>
+  </div>
+  <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+    <dt class="text-sm/6 font-medium text-gray-500">Today's Gain</dt>
+    <dd class="text-xs font-medium text-rose-600">+10.18%</dd>
+    <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹{{ todaygain }}</dd>
+  </div>
+</dl>
     </div>
   </div>
 
@@ -344,20 +271,6 @@
 </template>
 </Column>
 
-
-
-
-
-
-
-
-<Column class="cursor-pointer"   v-if="visibleColumns.includes('action')"  field="action" header="Action" :showFilterOperator="false" :showFilterMatchModes="false" >
-  <template #body="{ data }">
- <button type="button"  @click="topcanva(data)" class="rounded-md   px-2 py-1.5 text-sm bg-indigo-600 font-semibold text-white shadow-sm " ><i class="pi pi-eye"></i></button>
-
- 
-</template>
-</Column>
 </DataTable>
 
 <Drawer v-model:visible="visibleTop2" header="Stock Details" position="top" style="height: auto">
@@ -899,7 +812,7 @@ const customtoggle = () => {
 const columns = ref([
 { field: 'stockname', header: 'Stockname' },
 { field: 'quantity', header: 'Quantity' },
-{ field: 'action', header: 'Action' },
+
 ]);
 //Initially select all columns except 'ltp', 'mktval', and 'date'
 const selectedColumns = ref(columns.value.filter(col => !['ltp', 'mktval', 'date'].includes(col.field)));
@@ -1023,4 +936,5 @@ console.error("Error:", error.message);
   background-color: blue !important;
   border: blue !important;
 }
+
 </style>
