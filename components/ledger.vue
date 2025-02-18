@@ -173,7 +173,7 @@
  
 
 <div class="w-full" v-if="content">
-<div class="overflow-hidden rounded-lg bg-white ">
+<div class="overflow-hidden rounded-lg bg-white shadow">
     <div class="px-1 py-1">
       
  <dl class="mx-auto grid grid-cols-2 gap-px bg-gray-900/5">
