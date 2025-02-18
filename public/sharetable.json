@@ -1207,19 +1207,7 @@
         "days": "10.00",
         "daysplus": "+1.00%"
     },
-    {
-        "stockname": "LMNOP",
-        "date": "2025-02-17",
-        "quantity": 30,
-        "avgprice": "300.50",
-        "ltp": "117.00",
-        "invamt": "260.50",
-        "mktval": "9000.00",
-        "overall": "2.50",
-        "overallpluss": "-3.50%",
-        "days": "20.00",
-        "daysplus": "+0.50%"
-    },
+
     {
         "stockname": "ABCAPITAL",
         "date": "2025-02-01",
@@ -1351,7 +1339,7 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ABCAPITAL",
+        "stockname": "GURUTECH",
         "date": "2025-02-08",
         "quantity": 59,
         "avgprice": "186.56",
@@ -1364,7 +1352,7 @@
         "daysplus": "+2.23%"
     },
     {
-        "stockname": "ABCAPITAL",
+        "stockname": "HDFC",
         "date": "2025-02-08",
         "quantity": 58,
         "avgprice": "181.56",
@@ -1377,7 +1365,7 @@
         "daysplus": "+2.23%"
     },
     {
-        "stockname": "ABCAPITAL",
+        "stockname": "HDB",
         "date": "2025-02-08",
         "quantity": 57,
         "avgprice": "185.56",
@@ -1390,7 +1378,7 @@
         "daysplus": "+2.23%"
     },
     {
-        "stockname": "ABCAPITAL",
+        "stockname": "MRF-TYRES",
         "date": "2025-02-08",
         "quantity": 56,
         "avgprice": "187.56",
@@ -1403,7 +1391,7 @@
         "daysplus": "+2.23%"
     },
     {
-        "stockname": "ABCAPITAL",
+        "stockname": "WIPRO",
         "date": "2025-02-08",
         "quantity": 65,
         "avgprice": "188.56",
@@ -1416,7 +1404,7 @@
         "daysplus": "+2.23%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "INFOSYS",
         "date": "2025-02-07",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1429,7 +1417,7 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "RELIANCE",
         "date": "2025-02-09",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1442,7 +1430,7 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "DENMARK",
         "date": "2025-02-09",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1455,7 +1443,7 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "GLENMARK",
         "date": "2025-02-09",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1468,7 +1456,7 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "SUN-PHARMA",
         "date": "2025-02-10",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1481,7 +1469,20 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
+        "stockname": "HCL-TECH",
+        "date": "2025-02-11",
+        "quantity": 55,
+        "avgprice": "190.50",
+        "ltp": "100.00",
+        "invamt": "100.50",
+        "mktval": "1000.00",
+        "overall": "20.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "TATA-STEEL",
         "date": "2025-02-12",
         "quantity": 55,
         "avgprice": "190.50",
@@ -1494,14 +1495,79 @@
         "daysplus": "+0.50%"
     },
     {
-        "stockname": "ADANI",
-        "date": "2025-02-12",
+        "stockname": "SOUTHINDIAN-BANK",
+        "date": "2025-02-13",
         "quantity": 55,
         "avgprice": "190.50",
         "ltp": "100.00",
         "invamt": "100.50",
         "mktval": "1000.00",
         "overall": "20.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "NIPPON",
+        "date": "2025-02-14",
+        "quantity": 55,
+        "avgprice": "190.50",
+        "ltp": "100.00",
+        "invamt": "100.50",
+        "mktval": "1000.00",
+        "overall": "20.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "YES-BANK",
+        "date": "2025-02-15",
+        "quantity": 55,
+        "avgprice": "190.50",
+        "ltp": "100.00",
+        "invamt": "100.50",
+        "mktval": "1000.00",
+        "overall": "20.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "LMNOP",
+        "date": "2025-02-16",
+        "quantity": 30,
+        "avgprice": "300.50",
+        "ltp": "117.00",
+        "invamt": "260.50",
+        "mktval": "9000.00",
+        "overall": "2.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "LMNOP",
+        "date": "2025-02-17",
+        "quantity": 30,
+        "avgprice": "300.50",
+        "ltp": "117.00",
+        "invamt": "260.50",
+        "mktval": "9000.00",
+        "overall": "2.50",
+        "overallpluss": "-3.50%",
+        "days": "20.00",
+        "daysplus": "+0.50%"
+    },
+    {
+        "stockname": "LMNOP",
+        "date": "2025-02-18",
+        "quantity": 30,
+        "avgprice": "300.50",
+        "ltp": "117.00",
+        "invamt": "260.50",
+        "mktval": "9000.00",
+        "overall": "2.50",
         "overallpluss": "-3.50%",
         "days": "20.00",
         "daysplus": "+0.50%"
