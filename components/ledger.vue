@@ -14,44 +14,16 @@
         </div>
 
         <div class="w-4 h4">
-          <button type="button"  @click="customtoggle()" class="rounded-md bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-calendar-clock"></i></button>
+          <button type="button"   @click="customtoggle()"  class="rounded-md  px-1 py-1 text-sm font-semibold text-slate-500   border-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+                </svg>
+            </button>
 
         </div>
        </div>
-        <div class="w-full h-9  flex gap-2 justify-end "  >
-
-          <MultiSelect
-              v-model="selectedColumns"
-              :options="columns"
-              optionLabel="header"
-              @change="updateVisibleColumns"
-              display="template"
-
-              :showToggleAll="false"
-              :dropdownIcon="null" 
-              class="p-0 bg-indigo-500"
-              style="width: 42px;"
-            
-             
-              >
-              <template #dropdownicon>
-                <i class="pi pi-table" />
-            </template>
-           
-              <template #footer v-if="showReset">
-                <button type="button"   @click="resetColumns" class="rounded-md w-full bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset</button>
-
-            
-              </template>
-              </MultiSelect> 
-
-              <button type="button"   @click="exportCSV($event)" class="rounded-md bg-indigo-600 px-2 py-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="pi pi-arrow-circle-down"></i></button>
-
-        </div>
+    
          <div >
-       
-
-            
           <Drawer v-model:visible="visibleTop" header="Filter" position="top" style="height: auto">
             <span class="text-lg"><i class="pi pi-clock"></i> Frequently used time period</span>
       <div class="w-full p-1 flex gap-2 pl-5">
@@ -121,8 +93,10 @@
 <!-- Table Skeleton -->
 <div class="border border-gray-300 ">
 
-<div class="h-10 p-2   animate-pulse">
+<div class="h-10 p-2  flex gap-2  animate-pulse">
 <div class="h-6 bg-gray-200 rounded w-full animate-pulse"></div>
+<div class="h-6 w-6 bg-gray-200 animate-pulse rounded"></div>
+<div class="h-6 w-6 bg-gray-200 animate-pulse rounded"></div>
 </div>
 
 <div class="grid grid-cols-3 p-3 bg-gray-100">
@@ -234,13 +208,42 @@
 
 
 <template #header>
-      <div class="flex justify-end">
+      <div class="flex justify-end items-center">
           <IconField  class="w-full">
               <InputIcon>
                   <i class="pi pi-search" />
               </InputIcon>
               <InputText v-model="filters['global'].value" placeholder="Search stock and company" class="w-full" />
           </IconField>
+          <MultiSelect
+                v-model="selectedColumns"
+                :options="columns"
+                optionLabel="header"
+                @change="updateVisibleColumns"
+                display="template"
+  
+                :showToggleAll="false"
+                :dropdownIcon="null" 
+               class="p-0 text-white ml-2"
+                style="width: 40px; height: 34px; "
+                >
+  
+                <template #dropdownicon>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-slate-500">
+                    <path fill-rule="evenodd" d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 18.375V5.625ZM21 9.375A.375.375 0 0 0 20.625 9h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5ZM10.875 18.75a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5ZM3.375 15h7.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375Zm0-3.75h7.5a.375.375 0 0 0 .375-.375v-1.5A.375.375 0 0 0 10.875 9h-7.5A.375.375 0 0 0 3 9.375v1.5c0 .207.168.375.375.375Z" clip-rule="evenodd" />
+                    </svg>
+
+              </template>
+                
+                <template #footer v-if="showReset">
+                  <button type="button"  @click="resetColumns" class="rounded-md w-full bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset</button>
+  
+                </template>
+                </MultiSelect>
+            <button type="button"  @click="exportCSV($event)" class="rounded-md ml-2  px-1 py-1 text-sm font-semibold text-slate-500  border-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z" clip-rule="evenodd" />
+                </svg>
+                </button>
       </div>
 
 
@@ -919,22 +922,20 @@ console.error("Error:", error.message);
 </script>
 <style>
 
-.p-paginator .p-paginator-pages .p-paginator-page {
-  background-color: #5fa5f5 !important; 
-    color: white !important; 
-   
-   
-}
-
-
-.p-paginator .p-paginator-pages .p-paginator-page:hover {
-    background-color: #0056b3 !important;
-}
-
-
 .p-checkbox-checked.p-variant-filled .p-checkbox-box{
-  background-color: blue !important;
-  border: blue !important;
-}
-
+    background-color: blue !important;
+    border: blue !important;
+  }
+ 
+  .p-multiselect.p-variant-filled{
+    background: none !important;
+  }
+  .p-multiselect{
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .p-multiselect-dropdown{
+    border: 2px solid rgb(227, 227, 227);
+    border-radius: 5px;
+  }
 </style>
