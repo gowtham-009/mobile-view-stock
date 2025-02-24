@@ -168,7 +168,7 @@
             <ledger :customValue="clientcode" />
           </div>
           <div v-if="activeComponent === 'FA-Summary'">
-            <fasummary />
+            <fasummary :customValue="clientcode"/>
           </div>
           <div v-if="activeComponent === 'Trades'">
             <trades />
