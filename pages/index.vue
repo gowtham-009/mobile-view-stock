@@ -29,6 +29,7 @@
                 <div class="flex h-16 shrink-0 items-center">
                   <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=white"
                     alt="Your Company" />
+                    
                 </div>
                 <nav class="flex flex-1 flex-col">
                   <ul role="list" class="flex flex-1 flex-col gap-y-7">
@@ -135,7 +136,7 @@
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="" />
                 <span class="hidden lg:flex lg:items-center">
-                  <span class="ml-4 text-sm/6 font-semibold text-gray-900" aria-hidden="true">{{ val }}</span>
+                  <span class="ml-4 text-sm/6 font-semibold text-gray-900" aria-hidden="true">{{ clientcode }}</span>
                   <ChevronDownIcon class="ml-2 w-10 h-10 text-gray-400" aria-hidden="true" />
                 </span>
               </MenuButton>
@@ -164,9 +165,9 @@
           <div v-if="activeComponent === 'Ledger'">
             <ledger :customValue="clientcode" />
           </div>
-          <!-- <div v-if="activeComponent === 'FA-Summary'">
+          <div v-if="activeComponent === 'FA-Summary'">
             <fasummary />
-          </div> -->
+          </div>
           <div v-if="activeComponent === 'Trades'">
             <trades />
           </div>

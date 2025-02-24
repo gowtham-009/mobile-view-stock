@@ -14,6 +14,29 @@
 </div>
 
 
+<dl class="mx-auto grid grid-cols-2 p-2 gap-px border border-gray-300 rounded-lg ">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+      <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+      <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+      <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+      <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+      <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+      <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+      <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+      <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+      <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8 animate-pulse">
+      <dt class="h-4 w-20 bg-gray-300 rounded"></dt>
+      <dd class="h-3 w-10 bg-gray-300 rounded"></dd>
+      <dd class="w-full h-8 bg-gray-300 rounded"></dd>
+    </div>
+  </dl>
+
 <!-- Table Skeleton -->
 
 <div class="border border-gray-200 rounded-lg ">
@@ -169,6 +192,37 @@
 
 
     </div>
+
+    <div class="w-full mt-2" >
+      <div class="overflow-hidden rounded-lg bg-white shadow  mt-1">
+      <div class="px-2 py-2 ">
+  
+   <dl class="mx-auto grid grid-cols-2 gap-px bg-gray-900/5 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2  bg-white px-4 py-10 sm:px-6 xl:px-8">
+      <dt class="text-sm/6 font-medium text-gray-500">Invested Amount</dt>
+      <dd class="text-xs font-medium text-gray-700">+4.75%</dd>
+      <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight  text-gray-900">₹5000</dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+      <dt class="text-sm/6 font-medium text-gray-500">Current Value</dt>
+      <dd class="text-xs font-medium text-rose-600">+54.02%</dd>
+      <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹6000</dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+      <dt class="text-sm/6 font-medium text-gray-500">Overall Gain</dt>
+      <dd class="text-xs font-medium text-gray-700">-1.39%</dd>
+      <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹7000</dd>
+    </div>
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 bg-white px-4 py-10 sm:px-6 xl:px-8">
+      <dt class="text-sm/6 font-medium text-gray-500">Today's Gain</dt>
+      <dd class="text-xs font-medium text-rose-600">+10.18%</dd>
+      <dd class="w-full flex-none text-3xl/10 font-medium tracking-tight text-gray-900">₹8000</dd>
+    </div>
+  </dl> 
+      </div>
+    </div>
+    </div>
+
     <div class="w-full p-1 mt-2" >
 
       <DataTable 
