@@ -136,7 +136,7 @@
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="" />
                 <span class="hidden lg:flex lg:items-center">
-                  <span class="ml-4 text-sm/6 font-semibold text-gray-900" aria-hidden="true">{{ clientcode }}</span>
+                  <span class="ml-4 text-sm/6 font-semibold text-gray-900" aria-hidden="true"></span>
                   <ChevronDownIcon class="ml-2 w-10 h-10 text-gray-400" aria-hidden="true" />
                 </span>
               </MenuButton>
@@ -146,6 +146,8 @@
                 leave-to-class="transform opacity-0 scale-95">
                 <MenuItems
                   class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
+                  <h1 class="text-center p-1">{{ clientcode }}</h1>
+                  <hr>
                   <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
                   <a @click="profiledashboard(item)"
                     :class="[active ? 'bg-gray-50 outline-none cursor-pointer' : '', 'block px-3 py-1 text-sm/6 text-gray-900']">{{
@@ -194,9 +196,8 @@
 
 <script setup>
 import { ref } from 'vue'
-
 import ledger from '~/components/main.vue'
-// import fasummary from '~/components/fasummary.vue'
+import fasummary from '~/components/fasummary.vue'
 import profile from '~/components/profile.vue'
 import trades from '~/components/trades.vue'
 import profiltloss from '~/components/profitloss.vue'
